@@ -23,14 +23,9 @@ const Logo = () => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="h-6 w-6 text-primary"
+    className="h-6 w-6"
   >
     <rect width="24" height="24" fill="black" />
-    <path
-      d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C13.8475 20 15.5532 19.4432 16.9619 18.5"
-      stroke="white"
-      strokeWidth="2"
-    />
   </svg>
 );
 
