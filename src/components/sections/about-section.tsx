@@ -47,35 +47,37 @@ export function AboutSection() {
           entertain readers worldwide.
         </p>
       </div>
-      <div className="container grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        {aboutImage && (
-          <div className="relative aspect-video h-full w-full overflow-hidden rounded-lg shadow-lg">
-            <Image
-              src={aboutImage.imageUrl}
-              alt={aboutImage.description}
-              width={600}
-              height={400}
-              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-              data-ai-hint={aboutImage.imageHint}
-            />
+      <div className="container">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {aboutImage && (
+            <div className="relative aspect-video h-full w-full overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src={aboutImage.imageUrl}
+                alt={aboutImage.description}
+                width={600}
+                height={400}
+                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                data-ai-hint={aboutImage.imageHint}
+              />
+            </div>
+          )}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold">Our Mission</h3>
+            <p className="text-muted-foreground">
+              We believe every story deserves to be told and every author
+              deserves professional support. Our comprehensive publishing
+              services ensure your work reaches its full potential and finds
+              its audience.
+            </p>
+            <ul className="space-y-3">
+              {missionPoints.map((point, index) => (
+                <li key={index} className="flex items-start">
+                  <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                  <span className="text-muted-foreground">{point}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        )}
-        <div className="space-y-6">
-          <h3 className="text-2xl font-bold">Our Mission</h3>
-          <p className="text-muted-foreground">
-            We believe every story deserves to be told and every author
-            deserves professional support. Our comprehensive publishing
-            services ensure your work reaches its full potential and finds
-            its audience.
-          </p>
-          <ul className="space-y-3">
-            {missionPoints.map((point, index) => (
-              <li key={index} className="flex items-start">
-                <CheckCircle className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                <span className="text-muted-foreground">{point}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
       <div className="container mt-16 grid grid-cols-1 gap-8 text-center md:grid-cols-3">
