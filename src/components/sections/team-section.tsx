@@ -1,10 +1,7 @@
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
-import { Linkedin, Mail, Twitter } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { Button } from "../ui/button";
 
 const teamMembers = [
   {
@@ -13,8 +10,6 @@ const teamMembers = [
     experience: "20+ years",
     bio: "With over 20 years in publishing, Alexandra leads our editorial vision and ensures every publication meets our highest standards.",
     imageId: "team-alexandra-thompson",
-    skills: [],
-    socials: [],
   },
   {
     name: "David Kim",
@@ -22,24 +17,6 @@ const teamMembers = [
     experience: "15+ years",
     bio: "David specializes in fiction and literary works, bringing a keen eye for narrative structure and character development.",
     imageId: "team-david-kim",
-    skills: ["Fiction Editing", "Manuscript Review", "Author Mentoring"],
-    socials: [
-      {
-        name: "LinkedIn",
-        icon: <Linkedin className="h-5 w-5" />,
-        url: "#",
-      },
-      {
-        name: "Mail",
-        icon: <Mail className="h-5 w-5" />,
-        url: "#",
-      },
-      {
-        name: "Twitter",
-        icon: <Twitter className="h-5 w-5" />,
-        url: "#",
-      },
-    ],
   },
   {
     name: "Maria Santos",
@@ -47,8 +24,27 @@ const teamMembers = [
     experience: "12+ years",
     bio: "Maria oversees all visual aspects of our publications, from cover design to interior layout, ensuring stunning visual appeal.",
     imageId: "team-maria-santos",
-    skills: [],
-    socials: [],
+  },
+  {
+    name: "Robert Chen",
+    role: "Marketing Director",
+    experience: "18+ years",
+    bio: "Robert develops comprehensive marketing strategies that help our authors reach their target audiences effectively.",
+    imageId: "team-robert-chen",
+  },
+  {
+    name: "Jennifer Walsh",
+    role: "Acquisitions Editor",
+    experience: "10+ years",
+    bio: "Jennifer identifies and evaluates promising manuscripts, working closely with authors to develop their projects.",
+    imageId: "team-jennifer-walsh",
+  },
+  {
+    name: "Michael Rodriguez",
+    role: "Production Manager",
+    experience: "14+ years",
+    bio: "Michael ensures smooth production processes from final manuscript to printed book, maintaining quality at every step.",
+    imageId: "team-michael-rodriguez",
   },
 ];
 
@@ -57,7 +53,7 @@ export function TeamSection() {
     <section id="team" className="bg-secondary py-16 sm:py-24">
       <div className="container text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Our Team
+          Meet Our Team
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           Behind every great publication is a dedicated team of professionals.
@@ -73,10 +69,10 @@ export function TeamSection() {
             return (
               <Card
                 key={member.name}
-                className="overflow-hidden text-left transition-shadow duration-300 hover:shadow-xl"
+                className="overflow-hidden rounded-lg text-left shadow-lg transition-shadow duration-300 hover:shadow-xl"
               >
                 <CardContent className="p-0">
-                  <div className="group relative">
+                  <div className="relative">
                     {image && (
                       <Image
                         src={image.imageUrl}
@@ -90,19 +86,6 @@ export function TeamSection() {
                     <div className="absolute right-4 top-4">
                       <Badge>{member.experience}</Badge>
                     </div>
-                    {member.skills.length > 0 && (
-                      <div className="absolute bottom-2 left-2 flex flex-wrap gap-2">
-                        {member.skills.map((skill) => (
-                          <Badge
-                            key={skill}
-                            variant="secondary"
-                            className="bg-black/40 text-white backdrop-blur-sm"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    )}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold">{member.name}</h3>
@@ -110,21 +93,6 @@ export function TeamSection() {
                     <p className="mt-4 text-sm text-muted-foreground">
                       {member.bio}
                     </p>
-                    {member.socials.length > 0 && (
-                      <div className="mt-4 flex gap-2">
-                        {member.socials.map((social) => (
-                          <Button
-                            key={social.name}
-                            size="icon"
-                            variant="ghost"
-                            className="text-muted-foreground hover:text-primary"
-                            asChild
-                          >
-                            <a href={social.url}>{social.icon}</a>
-                          </Button>
-                        ))}
-                      </div>
-                    )}
                   </div>
                 </CardContent>
               </Card>
