@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract blue and white background for the hero section.",
+      "imageUrl": "https://images.unsplash.com/photo-1653299832314-5d3dc1e5a83c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMGJsdWV8ZW58MHx8fHwxNzYwNzMwOTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract blue"
+    },
+    {
+      "id": "about-us-image",
+      "description": "A modern office environment for the about us section.",
+      "imageUrl": "https://images.unsplash.com/photo-1657978837950-03646a7c7b9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzYwNzMxMTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern office"
+    }
+  ]
 }
