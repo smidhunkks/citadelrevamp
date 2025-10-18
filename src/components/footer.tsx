@@ -1,13 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import {
-  MessageCircle,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
-  Headset,
 } from "lucide-react";
 
 const Logo = () => (
@@ -107,7 +104,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-gray-800">
-        <div className="container flex h-16 flex-col items-center justify-center text-center sm:flex-row sm:justify-between">
+        <div className="container flex h-16 flex-col items-center justify-center text-center sm:flex-row sm:justify-center">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Citadel Publication. All rights
             reserved. |{" "}
@@ -115,13 +112,6 @@ export function Footer() {
               Website Builder
             </a>
           </p>
-          <Button
-            variant="default"
-            className="mt-4 rounded-full bg-black sm:mt-0"
-          >
-            <Headset className="mr-2 h-4 w-4" />
-            Talk with Us
-          </Button>
         </div>
       </div>
     </footer>
