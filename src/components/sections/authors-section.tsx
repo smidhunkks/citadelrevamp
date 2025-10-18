@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   BookOpen,
   Award,
-  ChevronDown,
   Linkedin,
   Twitter,
+  UserPlus,
 } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
@@ -83,17 +84,17 @@ export function AuthorsSection() {
             return (
               <Card
                 key={author.name}
-                className="overflow-visible bg-transparent shadow-none border-0 text-center"
+                className="overflow-visible border-0 bg-transparent text-center shadow-none"
               >
                 <CardContent className="flex flex-col items-center p-0">
-                  <div className="relative mb-4 h-40 w-40 group">
+                  <div className="group relative mb-4 h-40 w-40">
                     {image && (
                       <Image
                         src={image.imageUrl}
                         alt={author.name}
                         width={160}
                         height={160}
-                        className="rounded-full object-cover aspect-square transition-transform duration-300 group-hover:scale-105"
+                        className="aspect-square rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     )}
                     {author.socials.length > 0 && (
@@ -114,10 +115,10 @@ export function AuthorsSection() {
                   </div>
                   <h3 className="text-xl font-bold">{author.name}</h3>
                   <p className="mt-1 text-primary">{author.specialty}</p>
-                  <p className="mt-4 text-sm text-muted-foreground h-24">
+                  <p className="mt-4 h-24 text-sm text-muted-foreground">
                     {author.bio}
                   </p>
-                  <div className="mt-4 flex w-full justify-center gap-6 border-t border-b py-3">
+                  <div className="mt-4 flex w-full justify-center gap-6 border-b border-t py-3">
                     <div className="flex items-center gap-2 text-sm">
                       <BookOpen className="h-4 w-4" />
                       <span>{author.books} Books</span>
@@ -131,6 +132,21 @@ export function AuthorsSection() {
               </Card>
             );
           })}
+        </div>
+        <div className="mt-24 rounded-lg bg-background p-12 text-center shadow-lg">
+          <h3 className="text-3xl font-bold tracking-tight">
+            Join Our Author Community
+          </h3>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Ready to become our next featured author? We're always looking for
+            talented writers with compelling stories to tell.
+          </p>
+          <Button asChild className="mt-8" size="lg">
+            <Link href="#contact">
+              <UserPlus className="mr-2 h-5 w-5" />
+              Become an Author
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
