@@ -13,7 +13,7 @@ export default function Home() {
     <div className="flex min-h-dvh flex-col bg-background">
       <Header />
       <HeroSection />
-      <main className="flex-1">
+      <main className="container flex-1">
         <AboutSection />
         <ServicesSection />
         <PublicationsSection />
