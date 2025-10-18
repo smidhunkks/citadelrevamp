@@ -34,15 +34,18 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center px-4">
-        <div className="mr-4 flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4">
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
             <Logo />
             <span className="font-bold sm:inline-block">
               Citadel Publication
             </span>
           </Link>
-          <nav className="hidden gap-6 md:flex">
+        </div>
+
+        <nav className="hidden md:flex flex-1 items-center justify-center">
+          <div className="flex gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -52,10 +55,10 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-          </nav>
-        </div>
+          </div>
+        </nav>
 
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex items-center justify-end">
           <Button asChild className="hidden md:inline-flex">
             <Link href="#contact">Submit Manuscript</Link>
           </Button>
