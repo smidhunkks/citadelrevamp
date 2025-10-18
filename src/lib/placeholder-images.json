@@ -65,6 +65,24 @@
       "description": "Portrait of James Patterson Jr.",
       "imageUrl": "https://images.unsplash.com/photo-1710623443352-df8b4f45d227?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZW5pb3IlMjB3cml0ZXJ8ZW58MHx8fHwxNzYwNzcyNjc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "senior writer"
+    },
+    {
+      "id": "team-alexandra-thompson",
+      "description": "Portrait of Alexandra Thompson",
+      "imageUrl": "https://images.unsplash.com/photo-1554774853-719586f82d77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MDk4OTM5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "team-david-kim",
+      "description": "Portrait of David Kim",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjA5ODkzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "team-maria-santos",
+      "description": "Portrait of Maria Santos",
+      "imageUrl": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlJTIwd29tYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjA5ODkzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
     }
   ]
 }
