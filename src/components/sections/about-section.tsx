@@ -51,7 +51,7 @@ export function AboutSection() {
       </div>
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16 container">
         {aboutImage && (
-          <div className="relative aspect-video h-full w-full overflow-hidden rounded-lg shadow-lg">
+          <div className="relative aspect-video h-full w-full overflow-hidden rounded-lg shadow-lg pl-4">
             <Image
               src={aboutImage.imageUrl}
               alt={aboutImage.description}
