@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -18,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { submitContactForm } from "@/app/actions";
 import { contactFormSchema } from "@/lib/schema";
-import { Loader2 } from "lucide-react";
+import { Loader2, Send } from "lucide-react";
 
 export function ContactForm() {
   const { toast } = useToast();
@@ -29,9 +30,12 @@ export function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
+
+  const messageValue = form.watch("message");
 
   async function onSubmit(values: z.infer<typeof contactFormSchema>) {
     setIsSubmitting(true);
@@ -69,9 +73,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Full Name *</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Enter your full name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -82,9 +86,22 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>Email Address *</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder="Enter your email address" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Subject *</FormLabel>
+              <FormControl>
+                <Input placeholder="What is this regarding?" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -95,20 +112,27 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Message *</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="How can we help you?"
+                  placeholder="Tell us about your project or inquiry..."
                   className="min-h-[120px]"
                   {...field}
                 />
               </FormControl>
+              <FormDescription className="flex justify-end">
+                {messageValue.length}/500
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
         <Button type="submit" className="w-full" disabled={isSubmitting}>
-          {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {isSubmitting ? (
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          ) : (
+            <Send className="mr-2 h-4 w-4" />
+          )}
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>
