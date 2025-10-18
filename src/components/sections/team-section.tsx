@@ -51,7 +51,7 @@ const teamMembers = [
 export function TeamSection() {
   return (
     <section id="team" className="bg-secondary py-16 sm:py-24">
-      <div className="container text-center">
+      <div className="container px-4 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Meet Our Team
         </h2>
