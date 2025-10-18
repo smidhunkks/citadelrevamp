@@ -107,10 +107,7 @@ export function Footer() {
         <div className="container flex h-16 flex-col items-center justify-center text-center sm:flex-row sm:justify-center">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Citadel Publication. All rights
-            reserved. |{" "}
-            <a href="#" className="hover:text-white">
-              Website Builder
-            </a>
+            reserved.
           </p>
         </div>
       </div>
