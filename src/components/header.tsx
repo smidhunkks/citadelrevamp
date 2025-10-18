@@ -38,11 +38,9 @@ export function Header() {
         </div>
 
         <div className="flex flex-1 items-center justify-end">
-          <Link href="#contact" passHref>
-            <Button className="hidden md:inline-flex" asChild>
-              <a>Contact Us</a>
-            </Button>
-          </Link>
+          <Button asChild className="hidden md:inline-flex">
+            <Link href="#contact">Contact Us</Link>
+          </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -76,15 +74,11 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto">
-                  <Link
-                    href="#contact"
-                    passHref
-                    onClick={() => setOpen(false)}
-                  >
-                    <Button className="w-full" asChild>
-                      <a>Contact Us</a>
-                    </Button>
-                  </Link>
+                  <Button className="w-full" asChild>
+                    <Link href="#contact" onClick={() => setOpen(false)}>
+                      Contact Us
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </SheetContent>

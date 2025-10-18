@@ -29,11 +29,9 @@ export function HeroSection() {
             with precision and transparency.
           </p>
           <div className="mt-10">
-            <Link href="#contact" passHref>
-              <Button size="lg" asChild>
-                <a>Get in Touch</a>
-              </Button>
-            </Link>
+            <Button size="lg" asChild>
+              <Link href="#contact">Get in Touch</Link>
+            </Button>
           </div>
         </div>
       </div>
