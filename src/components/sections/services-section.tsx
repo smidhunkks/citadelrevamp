@@ -1,29 +1,64 @@
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { BarChart3, Briefcase, Users } from "lucide-react";
+import { CheckCircle, Edit, Palette, LayoutTemplate, Megaphone } from "lucide-react";
 
 const services = [
   {
-    icon: <Briefcase className="h-10 w-10 text-primary" />,
-    title: "Business Strategy",
+    icon: <Edit className="h-8 w-8 text-blue-600" />,
+    title: "Professional Editing",
     description:
-      "We help you define and execute a clear business strategy for sustainable growth and a competitive edge in the market.",
+      "Comprehensive editing services including developmental, copy, and line editing to perfect your manuscript.",
+    features: [
+      "Developmental editing",
+      "Copy editing",
+      "Proofreading",
+      "Style consistency",
+    ],
+    color: "bg-blue-100",
   },
   {
-    icon: <BarChart3 className="h-10 w-10 text-primary" />,
-    title: "Data Analytics",
+    icon: <Palette className="h-8 w-8 text-purple-600" />,
+    title: "Cover Design",
     description:
-      "Unlock the power of your data with our advanced analytics solutions, turning insights into actionable business intelligence.",
+      "Eye-catching, professional cover designs that capture your book's essence and attract readers.",
+    features: [
+      "Custom artwork",
+      "Typography design",
+      "Market research",
+      "Multiple concepts",
+    ],
+    color: "bg-purple-100",
   },
   {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: "User-Centric Design",
+    icon: <LayoutTemplate className="h-8 w-8 text-green-600" />,
+    title: "Book Formatting",
     description:
-      "Our design philosophy puts your users first, creating intuitive and engaging experiences that build loyalty and drive conversions.",
+      "Professional interior layout and formatting for both print and digital publications.",
+    features: [
+      "Print formatting",
+      "eBook conversion",
+      "Typography",
+      "Chapter layouts",
+    ],
+    color: "bg-green-100",
+  },
+  {
+    icon: <Megaphone className="h-8 w-8 text-orange-600" />,
+    title: "Marketing Support",
+    description:
+      "Strategic marketing and promotional services to help your book reach its target audience.",
+    features: [
+      "Marketing strategy",
+      "Social media promotion",
+      "Book launch support",
+      "Author branding",
+    ],
+    color: "bg-orange-100",
   },
 ];
 
@@ -33,27 +68,39 @@ export function ServicesSection() {
       <div className="container">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Our Services
+            Our Publishing Services
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            We offer a range of services designed to help your business thrive
-            in the digital age.
+          <p className="mx-auto mt-4 max-w-3xl text-muted-foreground lg:text-lg">
+            From manuscript to marketplace, we provide comprehensive publishing
+            services to help authors succeed at every stage of their journey.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="transform-gpu text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="flex transform-gpu flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
-              <CardHeader>
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary/10">
+              <CardHeader className="items-start">
+                <div
+                  className={`flex h-16 w-16 items-center justify-center rounded-full ${service.color}`}
+                >
                   {service.icon}
                 </div>
-                <CardTitle className="pt-4">{service.title}</CardTitle>
+                <CardTitle className="pt-4 text-xl">{service.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex flex-grow flex-col">
                 <p className="text-muted-foreground">{service.description}</p>
+                <ul className="mt-6 flex-grow space-y-3">
+                  {service.features.map((feature, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle className="mr-3 mt-1 h-4 w-4 flex-shrink-0 text-primary" />
+                      <span className="text-sm text-muted-foreground">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           ))}
