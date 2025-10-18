@@ -1,17 +1,29 @@
+"use client";
+
+import React, { useCallback, useEffect, useState, useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CheckCircle, Edit, Palette, LayoutTemplate, Megaphone } from "lucide-react";
+import {
+  CheckCircle,
+  Edit,
+  Palette,
+  LayoutTemplate,
+  Megaphone,
+} from "lucide-react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 const services = [
   {
@@ -68,7 +80,50 @@ const services = [
   },
 ];
 
+const DotButton = ({
+  selected,
+  onClick,
+}: {
+  selected: boolean;
+  onClick: () => void;
+}) => (
+  <button
+    className={cn(
+      "h-3 w-3 rounded-full transition-colors",
+      selected ? "bg-primary" : "bg-primary/20"
+    )}
+    type="button"
+    onClick={onClick}
+  />
+);
+
 export function ServicesSection() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+
+  const onSelect = useCallback((api: CarouselApi) => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, []);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      api?.scrollTo(index);
+    },
+    [api]
+  );
+
+  useEffect(() => {
+    if (!api) return;
+    setScrollSnaps(api.scrollSnapList());
+    onSelect(api);
+    api.on("select", onSelect);
+    api.on("reInit", onSelect);
+  }, [api, onSelect]);
+
+  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
+
   return (
     <section id="services" className="bg-secondary py-16 sm:py-24">
       <div className="container">
@@ -82,6 +137,8 @@ export function ServicesSection() {
           </p>
         </div>
         <Carousel
+          setApi={setApi}
+          plugins={[plugin.current]}
           opts={{
             align: "start",
             loop: true,
@@ -92,19 +149,21 @@ export function ServicesSection() {
             {services.map((service, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card
-                    className="flex h-full transform-gpu flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
-                  >
+                  <Card className="flex h-full transform-gpu flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <CardHeader className="items-start">
                       <div
                         className={`flex h-16 w-16 items-center justify-center rounded-full ${service.color}`}
                       >
                         {service.icon}
                       </div>
-                      <CardTitle className="pt-4 text-xl">{service.title}</CardTitle>
+                      <CardTitle className="pt-4 text-xl">
+                        {service.title}
+                      </CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-grow flex-col">
-                      <p className="text-muted-foreground">{service.description}</p>
+                      <p className="text-muted-foreground">
+                        {service.description}
+                      </p>
                       <ul className="mt-6 flex-grow space-y-3">
                         {service.features.map((feature, i) => (
                           <li key={i} className="flex items-start">
@@ -124,6 +183,15 @@ export function ServicesSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+        <div className="mt-8 flex justify-center gap-2">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              selected={index === current}
+              onClick={() => scrollTo(index)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
