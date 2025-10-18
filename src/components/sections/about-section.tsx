@@ -37,7 +37,7 @@ export function AboutSection() {
       id="about"
       className="bg-background text-foreground py-16 sm:py-24"
     >
-      <div className="container px-4">
+      <div className="container">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             About Citadel Publication
