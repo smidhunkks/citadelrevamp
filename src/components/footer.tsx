@@ -48,7 +48,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="bg-[#0D1829] text-white">
-      <div className="container py-12">
+      <div className="container px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2">
@@ -107,7 +107,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-gray-800">
-        <div className="container flex h-16 flex-col items-center justify-center text-center sm:flex-row sm:justify-between">
+        <div className="container flex h-16 flex-col items-center justify-center px-4 text-center sm:flex-row sm:justify-between">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Citadel Publication. All rights
             reserved. |{" "}
