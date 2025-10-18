@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="flex min-h-dvh flex-col bg-background">
       <Header />
-      <main className="flex-1 container px-4 md:px-6">
-        <HeroSection />
+      <HeroSection />
+      <main className="flex-1">
         <AboutSection />
         <ServicesSection />
         <PublicationsSection />
