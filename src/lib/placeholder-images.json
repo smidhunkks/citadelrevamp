@@ -41,6 +41,30 @@
       "description": "A mysterious door in a forest.",
       "imageUrl": "https://images.unsplash.com/photo-1704113078442-8ae5c1b28c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxteXN0ZXJ5JTIwZm9yZXN0fGVufDB8fHx8MTc2MDc3MjAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mystery forest"
+    },
+    {
+      "id": "author-sarah-mitchell",
+      "description": "Portrait of Dr. Sarah Mitchell.",
+      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjA3MzExMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "author-marcus-chen",
+      "description": "Portrait of Marcus Chen.",
+      "imageUrl": "https://images.unsplash.com/photo-1725582204515-542b57e88a34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwYXV0aG9yfGVufDB8fHx8MTc2MDc3MjY3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male author"
+    },
+    {
+      "id": "author-elena-rodriguez",
+      "description": "Portrait of Dr. Elena Rodriguez.",
+      "imageUrl": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxidXNpbmVzcyUyMHdvbWFufGVufDB8fHx8MTc2MDczOTcxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business woman"
+    },
+    {
+      "id": "author-james-patterson",
+      "description": "Portrait of James Patterson Jr.",
+      "imageUrl": "https://images.unsplash.com/photo-1710623443352-df8b4f45d227?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZW5pb3IlMjB3cml0ZXJ8ZW58MHx8fHwxNzYwNzcyNjc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "senior writer"
     }
   ]
 }
