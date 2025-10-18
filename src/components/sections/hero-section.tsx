@@ -37,7 +37,12 @@ export function HeroSection() {
                 Explore Publications
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button
+              size="lg"
+              variant="ghost"
+              asChild
+              className="border border-white"
+            >
               <Link href="#contact">
                 <Edit className="mr-2 h-5 w-5" />
                 Submit Your Work
