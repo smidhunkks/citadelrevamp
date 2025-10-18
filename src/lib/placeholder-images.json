@@ -11,6 +11,36 @@
       "description": "A modern office environment for the about us section.",
       "imageUrl": "https://images.unsplash.com/photo-1657978837950-03646a7c7b9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzYwNzMxMTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern office"
+    },
+    {
+      "id": "publication-digital-revolution",
+      "description": "Abstract digital art representing technology.",
+      "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkaWdpdGFsJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NjA3NTQ4OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital technology"
+    },
+    {
+      "id": "publication-quantum-dreams",
+      "description": "A cosmic, dreamy abstract image.",
+      "imageUrl": "https://images.unsplash.com/photo-1527409335569-f0e5c91fa707?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxxdWFudHVtJTIwcGh5c2ljc3xlbnwwfHx8fDE3NjA3NzIwMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "quantum physics"
+    },
+    {
+      "id": "publication-leadership-mindset",
+      "description": "A person looking out, conveying leadership.",
+      "imageUrl": "https://images.unsplash.com/photo-1683516993458-528c4b34c5e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsZWFkZXJzaGlwJTIwc3VjY2Vzc3xlbnwwfHx8fDE3NjA3NzIwMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leadership success"
+    },
+    {
+      "id": "publication-fiction-1",
+      "description": "A fantasy landscape for a fiction book.",
+      "imageUrl": "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYW50YXN5JTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2MDczMjY4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fantasy landscape"
+    },
+    {
+      "id": "publication-fiction-2",
+      "description": "A mysterious door in a forest.",
+      "imageUrl": "https://images.unsplash.com/photo-1704113078442-8ae5c1b28c0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxteXN0ZXJ5JTIwZm9yZXN0fGVufDB8fHx8MTc2MDc3MjAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mystery forest"
     }
   ]
 }
