@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Book, Edit } from "lucide-react";
 
 export function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
@@ -18,19 +19,29 @@ export function HeroSection() {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
         <div className="container">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Clarity in Every Interaction
+            Creating <span className="text-primary">Literary</span> Excellence
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-300 md:text-xl">
-            We provide modern solutions to complex problems, delivering results
-            with precision and transparency.
+            Citadel Publication empowers authors and readers through exceptional
+            publishing services. We transform manuscripts into masterpieces and
+            connect stories with the world.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" asChild>
-              <Link href="#contact">Get in Touch</Link>
+              <Link href="#publications">
+                <Book className="mr-2 h-5 w-5" />
+                Explore Publications
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="#contact">
+                <Edit className="mr-2 h-5 w-5" />
+                Submit Your Work
+              </Link>
             </Button>
           </div>
         </div>

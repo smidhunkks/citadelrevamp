@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, Wind } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -10,8 +10,29 @@ const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
+  { name: "Publications", href: "#publications" },
+  { name: "Authors", href: "#authors" },
+  { name: "Team", href: "#team" },
   { name: "Contact", href: "#contact" },
 ];
+
+const Logo = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 text-primary"
+  >
+    <rect width="24" height="24" fill="black" />
+    <path
+      d="M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C13.8475 20 15.5532 19.4432 16.9619 18.5"
+      stroke="white"
+      strokeWidth="2"
+    />
+  </svg>
+);
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -21,8 +42,10 @@ export function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Wind className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block">ClaritySite</span>
+            <Logo />
+            <span className="font-bold sm:inline-block">
+              Citadel Publication
+            </span>
           </Link>
           <nav className="hidden gap-6 md:flex">
             {navLinks.map((link) => (
@@ -39,7 +62,7 @@ export function Header() {
 
         <div className="flex flex-1 items-center justify-end">
           <Button asChild className="hidden md:inline-flex">
-            <Link href="#contact">Contact Us</Link>
+            <Link href="#contact">Submit Manuscript</Link>
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
@@ -57,8 +80,8 @@ export function Header() {
                     className="flex items-center space-x-2"
                     onClick={() => setOpen(false)}
                   >
-                    <Wind className="h-6 w-6 text-primary" />
-                    <span className="font-bold">ClaritySite</span>
+                    <Logo />
+                    <span className="font-bold">Citadel Publication</span>
                   </Link>
                 </div>
                 <nav className="mt-6 flex flex-col gap-4">
@@ -76,7 +99,7 @@ export function Header() {
                 <div className="mt-auto">
                   <Button className="w-full" asChild>
                     <Link href="#contact" onClick={() => setOpen(false)}>
-                      Contact Us
+                      Submit Manuscript
                     </Link>
                   </Button>
                 </div>
