@@ -145,10 +145,10 @@ export function ServicesSection() {
           }}
           className="mx-auto w-full max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-4">
             {services.map((service, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="p-1 h-full">
                   <Card className="flex h-full transform-gpu flex-col transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <CardHeader className="items-start">
                       <div
